@@ -44,7 +44,7 @@ There's a lot more to say about Ledger, and you should read [its awesome manual]
 
 # The Answer
 
-I now track the entire reimbursement process in my ledger file. The first steps are recorded as purchases of a THERAPY commodity from my therapist:
+I now track the entire reimbursement process in my ledger file. The first steps are recorded as purchases of a `THERAPY` commodity from my therapist:
 
 ```text
 2018/01/03 * Dr. Therapist Person
@@ -52,7 +52,7 @@ I now track the entire reimbursement process in my ledger file. The first steps 
     Checking
 ```
 
-This transaction says "take $200 out of Checking, convert it into 1 THERAPY which has a fixed cost of $200, and put that THERAPY into Reimbursements:Unsubmitted." (The account names I use in my actual ledger file are much longer, but I'll spare you for now.)
+This transaction says "take $200 out of Checking, convert it into 1 `THERAPY` which has a fixed cost of $200, and put that `THERAPY` into `Reimbursements:Unsubmitted`." (The account names I use in my actual ledger file are much longer, but I'll spare you for now.)
 
 The reason I use these commodities rather than just transfering the money is that Ledger will remember the date at which I bought the token. So if I want to know which visits I haven't submitted a claim for, Ledger will tell me directly:
 
@@ -61,9 +61,9 @@ $ ledger -f ledger.dat --lots  balance Reimbursements:Unsubmitted
 1 THERAPY {=$200.00} [18-Jan-03]
 ```
 
-If instead of using these THERAPY commodities I just transfered $200 into the Unsubmitted account, I'd need to track which specific visits have been submitted some other way.
+If instead of using these `THERAPY` commodities I just transfered $200 into the Unsubmitted account, I'd need to track which specific visits have been submitted some other way.
 
-Over the course of a month, my Unsubmitted account will gather more THERAPY until I get to the next step and submit a superbill. At this point, I'll transfer the specific THERAPY lots mentionined in the superbill to another account:
+Over the course of a month, my Unsubmitted account will gather more `THERAPY` until I get to the next step and submit a superbill. At this point, I'll transfer the specific `THERAPY` lots mentionined in the superbill to another account:
 
 ```text
 2018/02/03 * Insurance Claim Submission
@@ -75,7 +75,7 @@ Over the course of a month, my Unsubmitted account will gather more THERAPY unti
     Reimbursements:Unsubmitted
 ```
 
-Now I know that I'm waiting for my insurance company to get back to me. Once they've processed my claim, these THERAPY lots are transformed back into cash (though not yet cash that I have access to).
+Now I know that I'm waiting for my insurance company to get back to me. Once they've processed my claim, these `THERAPY` lots are transformed back into cash (though not yet cash that I have access to).
 
 ```text
 2018/02/27 * Insurance Claim Processed
