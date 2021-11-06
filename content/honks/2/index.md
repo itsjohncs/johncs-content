@@ -13,7 +13,7 @@ containsElement () {
 }
 ```
 
-I feel like the writer didn't want people to understand this. Here's a commented and split-onto-multiple-lines version:
+I don't know about you but it took me more than a couple glances to see what's happening here. An annotated version:
 
 ```bash
 containsElement () {
@@ -27,20 +27,6 @@ containsElement () {
     for e; do
         # If [[ ... ]] return 0
         [[ "$e" == "$match" ]] && return 0
-    done
-    return 1
-}
-```
-
-And finally here's the version I actually used:
-
-```bash
-function contains_element {
-    local i
-    for i in "${@:2}"; do
-        if [[ $i == "$1" ]]; then
-            return 0
-        fi
     done
 
     return 1
